@@ -9,6 +9,7 @@ let blockies = [];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+  background(250, 248, 245, 100);
 
   // create array of blocks
   for (let i = 100; i < width - 100; i += 20){
@@ -21,7 +22,7 @@ function setup() {
 
 function draw() {
   // show blocks
-  background(250, 20);
+  background(250, 248, 245, 20);
   for (let i = 0; i < blockies.length; i++) {
     blockies[i].move();
     blockies[i].show();
@@ -31,7 +32,7 @@ function draw() {
   if (resetButton === true) {
     isPressed = false;
     resetButton = false;
-    background (250, 100);
+    background(250, 248, 245, 85);
     blockies = [];
     for (let i = 100; i < width - 100; i += 20){
       for (let j = 100; j < height - 100; j += 20) {
@@ -73,7 +74,7 @@ class Blockie {
     this.rectW = rectW;
     this.clickDist = random(25, 150);
     this.speedCap = 0.01;
-    this.outlineC = color(75, 75, 75);
+    this.outlineC = color(59, 52, 49);
   }
 
   // function for moving blocks
